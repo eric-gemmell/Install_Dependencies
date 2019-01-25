@@ -7,6 +7,8 @@ sudo apt install python-pip
 sudo apt install python3-pip
 pip install virtualenv
 pip3 install virtualenv
+sudo 'alias Venv="source Venv/bin/activate"' >> /home/eric/.bashrc
+sudo 'alias o="xdg-open"' >> /home/eric/.bashrc
 
 echo "Installing Docker!"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -22,3 +24,16 @@ sudo apt-get update
 sudo apt-get install oracle-java11-installer
 sudo apt-get install oracle-java11-set-default
 echo "Java 11 has been Installed!"
+
+echo "Installing Eclipse for Java !"
+curl -o /home/eric/Downloads/eclipse-installer-delete-Me.tar.gz ftp.fau.de/eclipse/oomph/epp/2018-12/R/eclipse-inst-linux64.tar.gz
+tar xvzf /home/eric/Downloads/eclipse-installer-delete-Me.tar.gz
+sudo rm /home/eric/Downloads/eclipse-installer-delete-Me.tar.gz
+echo ""
+echo "PLEASE CHANGE DEFAULT DIRECTORY TO BE IN /home/eric/ NOT /root/ !!!!"
+echo ""
+sudo /home/eric/Downloads/eclipse-installer/./eclipse-inst
+sudo 'alias eclipse="sudo /home/eric/eclipse/./eclipse"' >> /home/eric/.bashrc
+echo "Eclipse Has been Installed!"
+
+
