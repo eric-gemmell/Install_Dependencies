@@ -1,0 +1,24 @@
+#!/bin/bash
+sudo apt update
+sudo apt upgrade
+sudo apt install firefox 
+sudo apt install vim
+sudo apt install python-pip
+sudo apt install python3-pip
+pip install virtualenv
+pip3 install virtualenv
+
+echo "Installing Docker!"
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+echo "Docker installed Successfully!"
+
+echo "Installing Java 11!"
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get update
+sudo apt-get install oracle-java11-installer
+sudo apt-get install oracle-java11-set-default
+echo "Java 11 has been Installed!"
