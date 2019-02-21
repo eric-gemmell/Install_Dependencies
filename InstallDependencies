@@ -36,4 +36,10 @@ sudo /home/eric/Downloads/eclipse-installer/./eclipse-inst
 sudo 'alias eclipse="sudo /home/eric/eclipse/./eclipse"' >> /home/eric/.bashrc
 echo "Eclipse Has been Installed!"
 
-
+echo "Installing R and R studio"
+sudo apt -y install r-base
+sudo apt install gdebi-core
+curl -o /home/eric/Downloads/r-studio-DeleteMe.deb https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+sudo gdebi /home/eric/Downloads/r-studio-DeleteMe.deb
+rm -rf /home/eric/Downloads/r-studio-DeleteMe.deb
+echo "R studio installed"
