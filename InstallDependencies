@@ -43,3 +43,11 @@ curl -o /home/eric/Downloads/r-studio-DeleteMe.deb https://download1.rstudio.org
 sudo gdebi /home/eric/Downloads/r-studio-DeleteMe.deb
 rm -rf /home/eric/Downloads/r-studio-DeleteMe.deb
 echo "R studio installed"
+
+echo "Installing NodeJs"
+sudo apt install nodejs
+nodejs --version
+sudo apt install npm
+npm --version
+
+
